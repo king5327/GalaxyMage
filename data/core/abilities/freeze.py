@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Freeze")
+NAME = "Freeze"
 
-DESCRIPTION = _("Weak ice spell. (Sometimes freezes.)")
+DESCRIPTION = "Weak ice spell. (Sometimes freezes.)"
 
 ABILITY_TYPE = ACTION
 

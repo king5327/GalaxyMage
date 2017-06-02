@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Trip")
+NAME = "Trip"
 
-DESCRIPTION = _("Knocks down an enemy.")
+DESCRIPTION = "Knocks down an enemy."
 
 ABILITY_TYPE = ACTION
 

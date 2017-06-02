@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Defend")
+NAME = "Defend"
 
-DESCRIPTION = _("Increase your defense temporarily.")
+DESCRIPTION = "Increase your defense temporarily."
 
 ABILITY_TYPE = ACTION
 

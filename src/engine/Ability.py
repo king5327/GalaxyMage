@@ -28,6 +28,9 @@ FRIENDLY_AND_HOSTILE = 2
 
 # Ability types -- right now there are only action abilities
 ACTION = 0
+PASSIVE = 1 # Abilities that are always in effet. Not implemented.
+TOGGLE = 2 # Passive abilities that can be disabled due to drawbacks.
+ATTACK = 3 # Toggle abilities which have concrete costs and trigger per attack.
 
 # If an ability's sound is set to WEAPON_SOUND, it will use the sound
 # of the user's weapon.

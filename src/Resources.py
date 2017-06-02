@@ -189,7 +189,7 @@ class AbilityLoader(object):
                 raise Exception("Only action abilities are supported")
             
 
-            name = _(abilityData['NAME'])
+            name = (abilityData['NAME'])
             targetType = abilityData['TARGET_TYPE']
             range_ = abilityData['RANGE']
             aoe = abilityData['AOE']
@@ -207,7 +207,7 @@ class AbilityLoader(object):
             if abilityData.has_key('SOUND'):
                 sound = abilityData['SOUND']
 
-            description = _(abilityData['DESCRIPTION'])
+            description = (abilityData['DESCRIPTION'])
                 
             ability = Ability.Ability(name, description, cost, targetType,
                                       requiredWeapons,
@@ -245,7 +245,7 @@ class ClassLoader(object):
 
         spriteRoot = classData['SPRITE_ROOT']
 
-        self.cache[className] = Class_.Class(_(classData['NAME']),
+        self.cache[className] = Class_.Class((classData['NAME']),
                                              abilities,
                                              spriteRoot,
                                              classData['MOVE'],
@@ -293,7 +293,7 @@ class UnitLoader(object):
         localVars = {}
 
         # Load required modules
-        module = compile("from engine.Unit import numpy.oldnumeric.ma as MALE, FEMALE, NEUTER, " +
+        module = compile("from engine.Unit import MALE, FEMALE, NEUTER, " +
                          "FEMALE_OR_MALE",
                          "Unit.py", "exec")
         eval(module, globalVars)

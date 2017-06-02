@@ -195,10 +195,10 @@ class Unit(pb.Copyable, pb.RemoteCopy):
                                       Constants.W])
 
     def setPosn(self, x, y, z):
-        self._x = x
-        self._y = y
-        self._z = z
-
+        self._x = int(x)
+        self._y = int(y)
+        self._z = float(z)
+        
     def posn(self):
         return (self._x, self._y)
 

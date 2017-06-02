@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Protect")
+NAME = "Protect"
 
-DESCRIPTION = _("Protect a friend for one turn.")
+DESCRIPTION = "Protect a friend for one turn."
 
 ABILITY_TYPE = ACTION
 

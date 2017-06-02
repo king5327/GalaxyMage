@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Drain Life")
+NAME = "Drain Life"
 
-DESCRIPTION = _("Regenerate yourself at the expense of your enemy.")
+DESCRIPTION = "Regenerate yourself at the expense of your enemy."
 
 ABILITY_TYPE = ACTION
 

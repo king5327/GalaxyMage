@@ -141,7 +141,7 @@ class ScenarioIO(object):
         globalVars = {}
         localVars = {}
 
-        module = compile("from engine.Unit import numpy.oldnumeric.ma as MALE, FEMALE, NEUTER",
+        module = compile("from engine.Unit import MALE, FEMALE, NEUTER",
                          "Unit.py", "exec")
         eval(module, globalVars)
         module = compile("from engine.Faction import Faction",

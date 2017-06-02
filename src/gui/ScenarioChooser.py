@@ -160,14 +160,14 @@ class ScenarioChooserFSM(FSM.FSM):
         menu.results = ["random", "hill-ravine", "wall", "castle"]
 
     def enter_hostGame(self, *args):
-        self.chooser._label.setText(_("Host a game?"))
+        self.chooser._label.setText("Host a game?")
         menu = self.chooser._menu
-        menu.setOptions([_("Host new game"), _("Join existing game")])
+        menu.setOptions(["Host new game", "Join existing game"])
         menu.results = [True, False]
         
     def enter_serverAddress(self, *args):
         self.chooser.addressEntry.setEnabled(True)
-        self.chooser._label.setText(_("Type in the server address:"))
+        self.chooser._label.setText("Type in the server address:")
         menu = self.chooser._menu
         menu.setShowing(False)
         Input.get().setInDialog(True)

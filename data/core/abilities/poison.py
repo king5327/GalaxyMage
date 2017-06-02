@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Poison")
+NAME = "Poison"
 
-DESCRIPTION = _("Poison your enemy, causing him to lose HP every turn.")
+DESCRIPTION = "Poison your enemy, causing him to lose HP every turn."
 
 ABILITY_TYPE = ACTION
 

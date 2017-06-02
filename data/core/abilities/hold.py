@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Hold")
+NAME = "Hold"
 
-DESCRIPTION = _("Holds an enemy in place.")
+DESCRIPTION = "Holds an enemy in place."
 
 ABILITY_TYPE = ACTION
 

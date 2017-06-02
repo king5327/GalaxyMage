@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Regenerate")
+NAME = "Regenerate"
 
-DESCRIPTION = _("Gives your ally regeneration.")
+DESCRIPTION = "Gives your ally regeneration."
 
 ABILITY_TYPE = ACTION
 

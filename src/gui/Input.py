@@ -94,17 +94,20 @@ class Input(object):
 
 
     def joyButton(self, number):
+        return False
         if self._joystick == None or self._joystick.get_numbuttons() <= number:
             return False
         return self._joystick.get_button(number)
 
     def joyHat(self, number, axis):
+        return 0
         if self._joystick == None or self._joystick.get_numhats() <= number:
             return 0
         hat = self._joystick.get_hat(number)
         return hat[axis]
 
     def joyAxis(self, number):
+        return 0.0
         if self._joystick == None or self._joystick.get_numaxes() <= number:
             return 0.0
         return self._joystick.get_axis(number)

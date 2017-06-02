@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Sleep")
+NAME = "Sleep"
 
-DESCRIPTION = _("Put a opponent to sleep.")
+DESCRIPTION = "Put a opponent to sleep."
 
 ABILITY_TYPE = ACTION
 

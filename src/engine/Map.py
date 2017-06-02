@@ -20,7 +20,7 @@
 # 02110-1301, USA.
 
 
-import numpy.oldnumeric as Numeric
+import numpy as Numeric
 import cPickle
 import gzip
 import re
@@ -835,21 +835,30 @@ class MapIO(object):
         layoutLines = mapData['LAYOUT'].split('\n')
         layoutLines.pop(0)
         zdata = Numeric.zeros((width, height))
-        tileProperties = Numeric.zeros((width, height), Numeric.PyObject)
+        tileProperties = Numeric.zeros((width, height), list)
         y = 0
         for line in layoutLines:
             if re.match(re.compile(r'^\s*$'), line):
                 continue
-            tiles = re.split(re.compile(r'\s+(?!-?\d+,)(?!-?\d+\])'), line)
+
+            #FIXME: Fix the splitter regex so that it doesn't suppress split on turfs whose
+            # materials end with "wh" and have no space between it and the next turf.
+            splitter = re.compile(r'(?<!wh)(?:(?<=[a-z]|[A-Z]|\])\s*|(?<=\d)\s+)(?=\d)')
+            line = re.sub(splitter, " ", line)
+            tiles = re.split(splitter, line)
             for x in xrange(0, width):
                 tileData = tiles[x]
+                #print(tileData)
                 tileProperties[x,y] = {}
                 m = re.match(re.compile(
-                    r'(\d+)(\[(-?\d+), (-?\d+), (-?\d+), (-?\d+)\])?(wh(\d+))?(\w*)'), tileData)
+                    r'(\d+)(\[(-?\d+(?:\.?\d+)?), (-?\d+(?:\.\d+)?), (-?\d+(?:\.\d+)?), (-?\d+(?:\.\d+)?)\])?(wh(\d+))?(\w*)'), tileData)
                 zdata[x,y] = int(m.group(1))
-                tileProperties[x,y]['tag'] = m.group(9)
+                if m.group(9) != None:
+                    tileProperties[x,y]['tag'] = m.group(9)
+                else:
+                    tileProperties[x,y]['tag'] = ''
                 if m.group(2) != None:
-                    tileProperties[x,y]['cornerHeights'] = [int(m.group(3)),int(m.group(4)),int(m.group(5)),int(m.group(6))]
+                    tileProperties[x,y]['cornerHeights'] = [float(m.group(3)),float(m.group(4)),float(m.group(5)),float(m.group(6))]
                 if m.group(7) != None:
                     tileProperties[x,y]['waterHeight'] = int(m.group(8))
             y += 1

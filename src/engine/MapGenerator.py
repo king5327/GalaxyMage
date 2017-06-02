@@ -19,7 +19,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 # 02110-1301, USA.
 
-import numpy.oldnumeric as Numeric
+import numpy as Numeric
 import random
 import math
 import Util
@@ -185,10 +185,10 @@ def river(startX, startY, depth):
         mt[x, y] = t
         riverSquares.append((x, y))
         probs = []
-        probs.extend(['n'] * pn)
-        probs.extend(['s'] * ps)
-        probs.extend(['e'] * pe)
-        probs.extend(['w'] * pw)
+        probs.extend(['n'] * int(pn))
+        probs.extend(['s'] * int(ps))
+        probs.extend(['e'] * int(pe))
+        probs.extend(['w'] * int(pw))
         if len(probs) == 0:
             break
         direction = random.choice(probs)

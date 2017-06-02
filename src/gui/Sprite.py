@@ -412,7 +412,7 @@ class CursorPosnDisplayer(TextDisplayer):
 
     def getText(self):
         posn = self.cursor.posn3d()
-        return _("(%2d,%2d) h:%2d") % posn
+        return "(%2d,%2d) h:%2d" % posn
 
     def getBorder(self):
         return True
@@ -469,7 +469,7 @@ class UnitHPDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("HP: %d/%d") % (unit.hp(), unit.mhp())
+            return "HP: %d/%d" % (unit.hp(), unit.mhp())
 
     def draw(self):
         unit = self.cursor.hoveredUnit()
@@ -487,7 +487,7 @@ class UnitSPDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("SP: %d/%d") % (unit.sp(), unit.msp())
+            return "SP: %d/%d" % (unit.sp(), unit.msp())
 
     def draw(self):
         unit = self.cursor.hoveredUnit()
@@ -501,7 +501,7 @@ class UnitMovementDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("Move: %d  Jump: %d") % (unit.move(), unit.jump())
+            return "Move: %d  Jump: %d" % (unit.move(), unit.jump())
 
 
 class UnitPhysicalDisplayer(UnitStatsDisplayer):
@@ -510,7 +510,7 @@ class UnitPhysicalDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("W.Atk: %d  W.Def: %d") % (unit.watk(), unit.wdef())
+            return "W.Atk: %d  W.Def: %d" % (unit.watk(), unit.wdef())
 
 
 class UnitMagicalDisplayer(UnitStatsDisplayer):
@@ -519,7 +519,7 @@ class UnitMagicalDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("M.Atk: %d  M.Def: %d") % (unit.matk(), unit.mdef())
+            return "M.Atk: %d  M.Def: %d" % (unit.matk(), unit.mdef())
 
 
 class UnitClassDisplayer(UnitStatsDisplayer):
@@ -528,7 +528,7 @@ class UnitClassDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("Lv. %d %s") % (unit.level(), unit.className())
+            return "Lv. %d %s" % (unit.level(), unit.className())
 
 
 class UnitSpeedDisplayer(UnitStatsDisplayer):
@@ -537,7 +537,7 @@ class UnitSpeedDisplayer(UnitStatsDisplayer):
         if unit == None:
             return ""
         else:
-            return _("Speed: %d") % unit.speed()
+            return "Speed: %d" % unit.speed()
 
 class TextDisplayerBox(Sprite):
     def __init__(self, textDisplayers, posn, width, height = None):
@@ -754,7 +754,7 @@ class BattleMenu(TextMenu):
     
     def __init__(self, posn):
         TextMenu.__init__(self, posn , 100, 8)
-        self.setOptions([_("Move"), _("Attack"), _("Special"), _("Done")])
+        self.setOptions(["Move", "Attack", "Special", "Done"])
         self.selectedUnit = None
         self._showing = False
         
@@ -812,7 +812,7 @@ class SpecialMenu(TextMenu):
             if self._showing and enabled:
                 ability = self.getSelection()
                 ScenarioGUI.get().setTopText(ability.description() +
-                                            _(" (%d SP)") % ability.cost())
+                                            " (%d SP)" % ability.cost())
 
 class Animation(Sprite):
     def done(self):

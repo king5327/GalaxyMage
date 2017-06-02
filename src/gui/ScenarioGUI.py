@@ -876,7 +876,7 @@ class ScenarioGUIFSM(FSM.FSM):
     def enter_facing(self, oldState, reason):
         self.gui.focusedElement = self.gui.cursor
         self.gui.cursor.setFacingMode(True)
-        self.gui.setTopText(_("Choose unit facing..."))
+        self.gui.setTopText("Choose unit facing...")
 
     def accept_facing(self):
         df = self.gui.client.remote('unitFacing',

@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Yell")
+NAME = "Yell"
 
-DESCRIPTION = _("Yell, dazing enemies and damaging them slightly.")
+DESCRIPTION = "Yell, dazing enemies and damaging them slightly."
 
 ABILITY_TYPE = ACTION
 

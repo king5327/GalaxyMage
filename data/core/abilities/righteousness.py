@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Righteousness")
+NAME = "Righteousness"
 
-DESCRIPTION = _("Call forth a righteous flame.")
+DESCRIPTION = "Call forth a righteous flame."
 
 ABILITY_TYPE = ACTION
 

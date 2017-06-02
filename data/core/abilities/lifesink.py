@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Life Sink")
+NAME = "Life Sink"
 
-DESCRIPTION = _("A relatively strong, life draining attack.")
+DESCRIPTION = "A relatively strong, life draining attack."
 
 ABILITY_TYPE = ACTION
 

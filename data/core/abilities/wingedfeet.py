@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Winged Feet")
+NAME = "Winged Feet"
 
-DESCRIPTION = _("Increases the movement rate of a unit.")
+DESCRIPTION = "Increases the movement rate of a unit."
 
 ABILITY_TYPE = ACTION
 

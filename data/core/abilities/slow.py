@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Slow")
+NAME = "Slow"
 
-DESCRIPTION = _("Decreases the speed of a unit.")
+DESCRIPTION = "Decreases the speed of a unit."
 
 ABILITY_TYPE = ACTION
 

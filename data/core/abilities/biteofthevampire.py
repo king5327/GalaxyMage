@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Bite of The Vampire")
+NAME = "Bite of The Vampire"
 
-DESCRIPTION = _("Bite into your enemy and drink her blood!")
+DESCRIPTION = "Bite into your enemy and drink her blood!"
 
 ABILITY_TYPE = ACTION
 

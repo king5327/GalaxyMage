@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Crawl")
+NAME = "Crawl"
 
-DESCRIPTION = _("Decreases the movement rate of a unit.")
+DESCRIPTION = "Decreases the movement rate of a unit."
 
 ABILITY_TYPE = ACTION
 

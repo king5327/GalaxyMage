@@ -27,7 +27,7 @@ import optparse
 
 """Version number is MAJOR.MINOR.REVISION, optionally followed by a
 hyphen and some free-form text, like 'alpha' or 'prerelease'."""
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 def dependencyCheck():
     """Check to make sure that external dependencies can be loaded
@@ -35,10 +35,10 @@ def dependencyCheck():
     logging.debug('Platform: ' + platform.platform())
     logging.debug('Python version ' + sys.version)
     try:
-        import numpy.oldnumeric as Numeric
-        logging.debug('Numeric version ' + Numeric.__version__)
+        import numpy as Numeric
+        logging.debug('NumPy version ' + Numeric.__version__)
     except ImportError, err:
-        logging.error('Loading dependency "Numeric" failed: ' + str(err))
+        logging.error('Loading dependency "NumPy" failed: ' + str(err))
         sys.exit(1)
 
     try:

@@ -202,8 +202,8 @@ class InteractiveClient(GameClient):
     def remote_startGame(self, scenario):
         GameClient.remote_startGame(self, scenario)
         self.scenarioGUI = gui.ScenarioGUI.ScenarioGUI(self,
-                                                       scenario,
-                                                       self.faction)
+                                           scenario,
+                                           self.faction)
         self.window.setDelegate(self.scenarioGUI)
 
     def remote_chat(self, username, message):

@@ -1,8 +1,8 @@
 VERSION = 1
 
-NAME = _("Fire")
+NAME = "Fire"
 
-DESCRIPTION = _("Weak fire spell.")
+DESCRIPTION = "Weak fire spell."
 
 ABILITY_TYPE = ACTION
 
